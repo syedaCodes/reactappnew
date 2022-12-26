@@ -6,7 +6,7 @@ const SecLeftBottom = () => {
     <div className="hero__left--bottom">
         <form className="get-access">
             <input type="email" placeholder="Enter your email address" value="" />
-            <button type="submit" className="get-access-btn">Get access</button>
+            <button type="submit" className="btn-all get-access-btn">Get access</button>
         </form>
 
         <ul className="hero__left--bottom--ul">

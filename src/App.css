@@ -10,7 +10,8 @@
 }
 .header__container,
 .main,
-.footer{
+.footer,
+#about{
   width: 80%;
   margin: 0 auto;
   padding: 20px 60px;
@@ -20,6 +21,12 @@
 }
 /* re-used */
 .header__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__container{
+  width: 70%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,6 +80,7 @@
 }
 .hero__left{
   width: 40%;
+  min-width: 300px;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -125,6 +133,7 @@ form.get-access .get-access-btn{
 }
 .hero__right .video{
   width: 100%;
+  min-height: 300px;
   height: 100%;
 }
 /**/
@@ -137,4 +146,76 @@ svg{
   width: 10px;
   height: 10px;
   margin-right: 5px;
+}
+.footer{
+  text-align: center;
+}
+.footer__socials{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+a.footer__socials--link{
+  display: block;
+}
+a.footer__socials--link svg{
+  width: 32px;
+  height: 32px;
+}
+.footer__socials li:not(:last-child){
+  margin-right: 10px;
+}
+.btn-all{
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+.btn-primary-app{
+  text-transform: uppercase;
+  background: var(--color-secondary);
+  color: var(--color-quaternary);
+  cursor: pointer;
+  transform: translateY(0);
+  transition: all .2s ease-in-out;
+}
+.btn-primary-app:active{
+  transform: translateY(3px);
+}
+
+.btn-secondary-app{
+  background: var(--color-secondary);
+  cursor: pointer;
+}
+.btn-secondary-app svg{
+  fill: var(--color-quaternary);
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  vertical-align: sub;
+}
+#about p{
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+/* below 900px */
+@media only screen and (max-width: 900px){
+  /* .nav, .btn__container{
+    display: none;
+  } */
+  .header__container,
+  .main,
+  .footer,
+  #about,
+  .hero__left,
+  .hero__right{
+    width: 100%;
+  }
+  .hero{
+    flex-direction: column;
+  }
+  .hero__left{
+    margin-bottom: 20px;
+  }
 }
