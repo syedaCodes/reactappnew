@@ -134,6 +134,8 @@ form.get-access .get-access-btn{
 }
 .hero__right{
   width: 40%;
+  display: flex;
+  justify-content: center;
 }
 .hero__right--img{
   width: 250px;
