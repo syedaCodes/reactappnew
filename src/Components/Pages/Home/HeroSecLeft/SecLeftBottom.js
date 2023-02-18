@@ -16,21 +16,21 @@ const SecLeftBottom = () => {
 
         <ul className="hero__left--bottom--ul">
             <li>
-                <svg>
+                <svg className="svg-icons">
                     <use xlinkHref={`${Icons}#icon-check`}></use>
                 </svg>
                 <p className="inline-a">Work anywhere</p>
             </li>
 
             <li>
-                <svg>
+                <svg className="svg-icons">
                     <use xlinkHref={`${Icons}#icon-check`}></use>
                 </svg>
                 <p className="inline-a">Get rewarded</p>
             </li>
 
             <li>
-                <svg>
+                <svg className="svg-icons">
                     <use xlinkHref={`${Icons}#icon-check`}></use>
                 </svg>
                 <p className="inline-a">No hidden fee</p>

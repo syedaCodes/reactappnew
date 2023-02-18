@@ -1,9 +1,9 @@
 :root{
-  --color-primary: #ffb300;
-  --color-secondary: #090909;
+  --color-primary: #132d03;
+  --color-secondary: #ffeb00;
   --color-tertiary: #ff5100;
-  --color-quaternary: #ffffff;
-  --color-border: #333333;
+  --color-quaternary: #000000;
+  --color-border: #fde0e0;
 }
 .h2{
   font-weight: 600;
@@ -14,13 +14,16 @@
 #about{
   width: 90%;
   margin: 0 auto;
-  padding: 20px 60px;
 }
 .header{
-  border-bottom: .2px solid var(--color-border);
+  box-shadow: 2px -7px 5px 6px var(--color-border);
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-/* re-used */
 .header__container{
+  padding: 0 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,7 +70,8 @@
   color: var(--color-secondary);
 }
 .main{
-  height: 100%;
+  height: 80vh;
+  padding: 20px 60px;
 }
 .section{
   display: block;
@@ -104,7 +108,7 @@ form.get-access input[type="email"]{
   padding: 10px;
   font-size: 16px;
   width: 60%;
-  background: rgba(255, 255, 255, 0.7);
+  background: #fff;
   border: none;
   margin-right: 7px;
   border-radius: 2px;
@@ -131,24 +135,39 @@ form.get-access .get-access-btn{
 .hero__right{
   width: 40%;
 }
-.hero__right .video{
+.hero__right--img{
+  width: 250px;
+  height: 250px;
+}
+.hero__right--img svg{
+  display: block;
+  max-width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+/* .hero__right .video{
   width: 100%;
   min-height: 300px;
   height: 100%;
-}
+} */
 /**/
 .text__secondary{
   padding: 10px 0;
   line-height: 1.8;
   display: inline-block;
 }
-svg{
+input{
+  background: var(--color-border);
+}
+.svg-icons{
   width: 10px;
   height: 10px;
   margin-right: 5px;
+  fill: var(--color-secondary);
 }
 .footer{
   text-align: center;
+  height: 10vh;
 }
 .footer__socials{
   list-style: none;
@@ -190,7 +209,6 @@ a.footer__socials--link svg{
 .btn-primary-app:active{
   transform: translateY(3px);
 }
-
 .btn-secondary-app{
   background: var(--color-secondary);
   cursor: pointer;
@@ -202,7 +220,9 @@ a.footer__socials--link svg{
   margin: auto;
   vertical-align: sub;
 }
-
+.a-link{
+  color: var(--color-secondary);
+}
 /* mobile nav */
 #mobile-nav-btn{
   display: none;
