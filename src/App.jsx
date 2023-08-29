@@ -1,7 +1,7 @@
 function App() {
     return (
         <>
-            <h1>Split the bill - WIP</h1>
+            <h1>Split the bill</h1>
         </>
     );
 }
