@@ -1,7 +1,142 @@
+:root{
+    --color-primary: #ff922b;
+    --color-secondary: #ffa94d;
+    --color-tertiary: #ffe8cc;
+    --color-quaternary: #fff4e6;
+    --text-color-primary: #495057;
+    --text-color-secondary: #343a40;
+}
 *,
 *::after,
 *::before{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    padding: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    height: 100vh;
+    width: 100%;
+    color: var(--text-color-primary);
+}
+h1{
+    font-family: 'Galada', cursive;
+    text-align: center;
+    font-weight: 400;
+    font-size: 4.8rem;
+    padding: 1rem;
+    color: var(--text-color-secondary);
+}
+.wrapper{
+    outline: 1px solid #d8d8d8;
+    width: 85%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.main{
+    width: 50%;
+}
+.sidebar{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.friends-list{
+    list-style: none;
+    padding: 1rem 0;
+    font-size: 1.4rem;
+}
+li.friends-list-item{
+    padding: 1rem 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+li.friends-list-item:hover{
+    background-color: var(--color-quaternary);
+}
+li.friends-list-item .list-item-image{
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1.5rem;
+}
+.list-item-image image{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+li .list-item-text h3{
+    font-weight: 700;
+}
+li .list-item-text p{
+    font-weight: 400;
+    padding: .4rem 0;
+}
+li .list-item-text p.green {
+    color: #66a80f;
+}
+  
+li .list-item-text p.red {
+    color: #e03131;
+}
+.btn-primary{
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 7px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: var(--color-secondary);
+    color: var(--text-color-secondary);
+    margin-left: auto;
+}
+.btn-primary:hover{
+    background-color: var(--color-primary);
+}
+.add-friend-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: .4rem;
+    background-color: var(--color-quaternary);
+}
+.add-friend-form label{
+    font-size: 1.4rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.add-friend-form label::first-letter{
+    font-size: 1.8rem;
+}
+.add-friend-form label input{
+    border: 1px solid var(--color-tertiary);
+    margin-left: auto;
+    border-radius: .4rem;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 0.7rem;
+}
+.add-friend-form .btn-primary{
+    width: 59%;
+    min-width: 19.8rem;
+    margin-top: .6rem;
+}
+.sidebar .btn-primary:last-child{
+    align-self: flex-end;
+    margin-top: 1rem;
 }
