@@ -112,6 +112,7 @@ li .list-item-text p.red {
     padding: 2rem;
     border-radius: .4rem;
     background-color: var(--color-quaternary);
+    margin-bottom: 1.5rem;
 }
 .add-friend-form label{
     font-size: 1.4rem;
@@ -135,8 +136,4 @@ li .list-item-text p.red {
     width: 59%;
     min-width: 19.8rem;
     margin-top: .6rem;
-}
-.sidebar .btn-primary:last-child{
-    align-self: flex-end;
-    margin-top: 1rem;
 }
