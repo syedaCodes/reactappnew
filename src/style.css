@@ -22,7 +22,7 @@ body{
     font-weight: 400;
     height: 100vh;
     width: 100%;
-    color: --var(--text-color-primary);
+    color: var(--text-color-primary);
 }
 h1{
     font-family: 'Galada', cursive;
@@ -48,14 +48,16 @@ h1{
 }
 .sidebar{
     width: 40%;
+    display: flex;
+    flex-direction: column;
 }
 .friends-list{
     list-style: none;
-    padding: 1rem;
+    padding: 1rem 0;
     font-size: 1.4rem;
 }
 li.friends-list-item{
-    padding: 1rem;
+    padding: 1rem 2rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -98,10 +100,43 @@ li .list-item-text p.red {
     transition: 0.3s;
     background-color: var(--color-secondary);
     color: var(--text-color-secondary);
-}
-li .btn-primary{
     margin-left: auto;
 }
-li .btn-primary:hover{
+.btn-primary:hover{
     background-color: var(--color-primary);
+}
+.add-friend-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: .4rem;
+    background-color: var(--color-quaternary);
+}
+.add-friend-form label{
+    font-size: 1.4rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.add-friend-form label::first-letter{
+    font-size: 1.8rem;
+}
+.add-friend-form label input{
+    border: 1px solid var(--color-tertiary);
+    margin-left: auto;
+    border-radius: .4rem;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 0.7rem;
+}
+.add-friend-form .btn-primary{
+    width: 59%;
+    min-width: 19.8rem;
+    margin-top: .6rem;
+}
+.sidebar .btn-primary:last-child{
+    align-self: flex-end;
+    margin-top: 1rem;
 }

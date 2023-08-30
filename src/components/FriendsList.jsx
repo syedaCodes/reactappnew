@@ -23,13 +23,11 @@ const friends = [
 
 const FriendsList = () => {
     return (
-        <div className="sidebar">
-            <ul className="friends-list">
-                {friends.map((friend) => (
-                    <Friend key={friend.id} friend={friend} />
-                ))}
-            </ul>
-        </div>
+        <ul className="friends-list">
+            {friends.map((friend) => (
+                <Friend key={friend.id} friend={friend} />
+            ))}
+        </ul>
     );
 };
 
