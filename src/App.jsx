@@ -1,6 +1,7 @@
 import AddFriendForm from "./components/AddFriendForm";
 import Button from "./components/Button";
 import FriendsList from "./components/FriendsList";
+import SplitTheBillForm from "./components/SplitTheBillForm";
 
 function App() {
     return (
@@ -13,7 +14,9 @@ function App() {
                     <AddFriendForm />
                     <Button>Add friend</Button>
                 </div>
-                <div className="main"></div>
+                <div className="main">
+                    <SplitTheBillForm />
+                </div>
             </div>
         </div>
     );
