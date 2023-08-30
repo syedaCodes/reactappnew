@@ -61,7 +61,9 @@ li.friends-list-item{
     cursor: pointer;
     display: flex;
     align-items: center;
+    transition: 0.5s;
 }
+.selected,
 li.friends-list-item:hover{
     background-color: var(--color-quaternary);
 }
@@ -137,6 +139,12 @@ li .list-item-text p.red {
     font-size: 1.5rem;
     padding: 0.7rem;
     width: 15.8rem;
+}
+.split-the-bill-form label input:focus,
+.split-the-bill-form label select:focus,
+.add-friend-form label input:focus{
+  outline: none;
+  border: 1px solid var(--color-dark);
 }
 .split-the-bill-form .btn-primary,
 .add-friend-form .btn-primary{
