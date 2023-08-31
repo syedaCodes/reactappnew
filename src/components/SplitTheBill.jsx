@@ -29,6 +29,8 @@ const SplitTheBill = () => {
     const [friends, setFriends] = useState(defaultFriends);
     const [isAddFriendForm, setAddFriendForm] = useState(false);
 
+    const [selectedFriend, setSelectedFriend] = useState(null);
+
     const showAddFriendForm = () => setAddFriendForm((showForm) => !showForm);
 
     const handleAddFriend = (friend) => {
@@ -36,10 +38,21 @@ const SplitTheBill = () => {
         setAddFriendForm(false);
     };
 
+    const handleSelect = (friend) => {
+        setSelectedFriend((selected) =>
+            selected?.id === friend.id ? null : friend
+        );
+        setAddFriendForm(false);
+    };
+
     return (
         <>
             <div className="sidebar">
-                <FriendsList friends={friends} />
+                <FriendsList
+                    friends={friends}
+                    onHandleSelect={handleSelect}
+                    selectedFriend={selectedFriend}
+                />
 
                 {/* Add Friend Form */}
                 {isAddFriendForm && (
@@ -52,7 +65,9 @@ const SplitTheBill = () => {
                 </Button>
             </div>
             <div className="main">
-                <SplitTheBillForm />
+                {selectedFriend && (
+                    <SplitTheBillForm selectedFriend={selectedFriend} />
+                )}
             </div>
         </>
     );
