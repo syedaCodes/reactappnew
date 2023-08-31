@@ -166,3 +166,10 @@ li .list-item-text p.red {
     color: var(--text-color-secondary);
     margin-bottom: 1.5rem;
 }
+.sidebar > .btn-primary{
+    margin-top: 15px;
+    margin-right: 20px;
+}
+.sidebar > .add-friend-form + .btn-primary{
+    margin-top: 10px;
+}
