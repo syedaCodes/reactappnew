@@ -48,6 +48,19 @@ const SplitTheBill = () => {
         setAddFriendForm(false);
     };
 
+    const handleSplitBill = (value) => {
+        //we update the existing state - friends when the split the bill is clicked
+        setFriends((friends) =>
+            friends.map((friend) =>
+                friend.id === selectedFriend.id
+                    ? { ...friend, balance: friend.balance + value }
+                    : friend
+            )
+        );
+
+        setSelectedFriend(null);
+    };
+
     return (
         <>
             <div className="sidebar">
@@ -69,7 +82,10 @@ const SplitTheBill = () => {
             </div>
             <div className="main">
                 {selectedFriend && (
-                    <SplitTheBillForm selectedFriend={selectedFriend} />
+                    <SplitTheBillForm
+                        selectedFriend={selectedFriend}
+                        onSplitBill={handleSplitBill}
+                    />
                 )}
             </div>
         </>

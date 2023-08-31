@@ -139,12 +139,13 @@ li .list-item-text p.red {
     font-size: 1.5rem;
     padding: 0.7rem;
     width: 15.8rem;
+    text-align: center;
 }
 .split-the-bill-form label input:focus,
 .split-the-bill-form label select:focus,
 .add-friend-form label input:focus{
   outline: none;
-  border: 1px solid var(--color-dark);
+  border: 1px solid var(--color-secondary);
 }
 .split-the-bill-form .btn-primary,
 .add-friend-form .btn-primary{
