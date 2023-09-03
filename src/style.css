@@ -33,7 +33,6 @@ h1{
     color: var(--text-color-secondary);
 }
 .wrapper{
-    outline: 1px solid #d8d8d8;
     width: 65%;
     margin: 0 auto;
     padding: 1rem;
@@ -173,4 +172,17 @@ li .list-item-text p.red {
 }
 .sidebar > .add-friend-form + .btn-primary{
     margin-top: 10px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1440px) {
+  .container{
+    flex-direction: column-reverse;
+  }  
+  .sidebar{
+    width: 100%;
+  }
+  .main{
+    width: 80%;
+    margin: auto;
+  }
 }
