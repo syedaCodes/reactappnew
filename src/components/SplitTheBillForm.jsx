@@ -4,9 +4,12 @@ import Button from "./Button";
 const SplitTheBillForm = ({ selectedFriend, onSplitBill }) => {
     const [bill, setBill] = useState("");
     const [paidByUser, setPaidByUsed] = useState("");
+
+    const paidByFriend = bill ? bill - paidByUser : "";
+
     const [whoIsPaying, setWhoIsPaying] = useState("user");
 
-    const paid = bill ? bill - paidByUser : "";
+    //check why are the calculations wrong
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -14,7 +17,7 @@ const SplitTheBillForm = ({ selectedFriend, onSplitBill }) => {
         if (!bill || !paidByUser) return;
 
         //we need to update the friends array so the list is updated with the status of balance
-        onSplitBill(whoIsPaying === "user" ? paidByUser : -paidByUser);
+        onSplitBill(whoIsPaying === "user" ? paidByFriend : -paidByUser);
     };
 
     return (
@@ -48,7 +51,7 @@ const SplitTheBillForm = ({ selectedFriend, onSplitBill }) => {
             </label>
             <label>
                 👫{selectedFriend.name}`s expense
-                <input type="text" value={paid} disabled />
+                <input type="text" disabled value={paidByFriend} />
             </label>
             <label htmlFor="who-is-paying">
                 🤑 Who is paying the bill

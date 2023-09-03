@@ -85,6 +85,7 @@ const SplitTheBill = () => {
                     <SplitTheBillForm
                         selectedFriend={selectedFriend}
                         onSplitBill={handleSplitBill}
+                        key={selectedFriend.id}
                     />
                 )}
             </div>
