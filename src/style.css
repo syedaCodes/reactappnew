@@ -33,7 +33,6 @@ h1{
     color: var(--text-color-secondary);
 }
 .wrapper{
-    outline: 1px solid #d8d8d8;
     width: 65%;
     margin: 0 auto;
     padding: 1rem;
@@ -61,7 +60,9 @@ li.friends-list-item{
     cursor: pointer;
     display: flex;
     align-items: center;
+    transition: 0.5s;
 }
+.selected,
 li.friends-list-item:hover{
     background-color: var(--color-quaternary);
 }
@@ -137,6 +138,13 @@ li .list-item-text p.red {
     font-size: 1.5rem;
     padding: 0.7rem;
     width: 15.8rem;
+    text-align: center;
+}
+.split-the-bill-form label input:focus,
+.split-the-bill-form label select:focus,
+.add-friend-form label input:focus{
+  outline: none;
+  border: 1px solid var(--color-secondary);
 }
 .split-the-bill-form .btn-primary,
 .add-friend-form .btn-primary{
@@ -157,4 +165,24 @@ li .list-item-text p.red {
     letter-spacing: .5px;
     color: var(--text-color-secondary);
     margin-bottom: 1.5rem;
+}
+.sidebar > .btn-primary{
+    margin-top: 15px;
+    margin-right: 20px;
+}
+.sidebar > .add-friend-form + .btn-primary{
+    margin-top: 10px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1440px) {
+  .container{
+    flex-direction: column-reverse;
+  }  
+  .sidebar{
+    width: 100%;
+  }
+  .main{
+    width: 80%;
+    margin: auto;
+  }
 }
