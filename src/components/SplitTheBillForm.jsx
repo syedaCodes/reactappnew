@@ -27,17 +27,19 @@ const SplitTheBillForm = ({ selectedFriend, onSplitBill }) => {
                 {selectedFriend.name ? ` with ${selectedFriend.name}` : ""}
             </h2>
 
-            <label>
+            <label htmlFor="bill-value">
                 💰 Bill value
                 <input
+                    id="bill-value"
                     type="text"
                     value={bill}
                     onChange={(e) => setBill(Number(e.target.value))} //Bill total
                 />
             </label>
-            <label>
+            <label htmlFor="your-expense">
                 🧍Your expense
                 <input
+                    id="your-expense"
                     type="text"
                     value={paidByUser}
                     onChange={(e) =>
@@ -49,13 +51,19 @@ const SplitTheBillForm = ({ selectedFriend, onSplitBill }) => {
                     } //how much is your share
                 />
             </label>
-            <label>
+            <label htmlFor="friend-expense">
                 👫{selectedFriend.name}`s expense
-                <input type="text" disabled value={paidByFriend} />
+                <input
+                    type="text"
+                    disabled
+                    value={paidByFriend}
+                    id="friend-expense"
+                />
             </label>
             <label htmlFor="who-is-paying">
                 🤑 Who is paying the bill
                 <select
+                    id="who-is-paying"
                     name="who-is-paying"
                     value={whoIsPaying}
                     onChange={(e) => setWhoIsPaying(e.target.value)}
