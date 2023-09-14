@@ -27,18 +27,20 @@ const AddFriendForm = ({ onAddFriend }) => {
 
     return (
         <form className="add-friend-form" onSubmit={handleSubmit}>
-            <label>
+            <label htmlFor="friend-name">
                 👫 Friend name
                 <input
+                    id="friend-name"
                     type="text"
                     name="friend-name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                 />
             </label>
-            <label>
+            <label htmlFor="image-url">
                 🌄 Image URL
                 <input
+                    id="image-url"
                     type="text"
                     name="image-url"
                     value={image}

@@ -32,7 +32,6 @@ const SplitTheBill = () => {
     const [selectedFriend, setSelectedFriend] = useState(null);
 
     const showAddFriendForm = () => {
-        setSelectedFriend(null);
         setAddFriendForm((showForm) => !showForm);
     };
 
